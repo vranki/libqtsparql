@@ -333,6 +333,14 @@ void QSparqlConnectionPrivate::registerConnectionCreator(const QString& name,
     has been deleted. Deleting the connection before the QSparqlResult in this scenario
     will invalidate the result, do not do this.
 
+Meego: The security tokens required to work depend on the specific driver:
+@credential TrackerReadAccess To run queries via DBus. 
+  Mandatory for queries with QTRACKER driver.
+@credential TrackerWriteAccess To run any update. 
+  Mandatory for updates with QTRACKER or QTRACKER_DIRECT drivers.
+@credential GRP::metadata-user Permission to run queries directly on the DB. 
+  Mandatory for queries with QTRACKER_DIRECT
+
 */
 
 /*!

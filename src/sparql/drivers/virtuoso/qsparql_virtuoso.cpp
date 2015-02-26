@@ -57,12 +57,13 @@
 #include <QtCore/QMutexLocker>
 #include <QtCore/QThread>
 
-#include <QtSparql/qsparqlerror.h>
-#include <QtSparql/qsparqlbinding.h>
-#include <QtSparql/qsparqlresultrow.h>
-#include <QtSparql/qsparqlquery.h>
-#include <QtSparql/qsparqlqueryoptions.h>
-#include <QtSparql/private/qsparqlntriples_p.h>
+#include "../../../sparql/kernel/qsparqlerror.h"
+#include "../../../sparql/kernel/qsparqlbinding.h"
+#include "../../../sparql/kernel/qsparqlresultrow.h"
+#include "../../../sparql/kernel/qsparqlquery.h"
+#include "../../../sparql/kernel/qsparqlqueryoptions.h"
+#include "../../../sparql/kernel/qsparqlntriples_p.h"
+
 #define XSD_DATE
 #include "../../kernel/qsparqlxsd_p.h"
 
