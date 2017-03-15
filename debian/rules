@@ -1,13 +1,13 @@
 #!/usr/bin/make -f
 # -*- makefile-mode -*-
 
-#export DH_VERBOSE=1
-include /usr/share/quilt/quilt.make 
+export DH_VERBOSE=1
+#include /usr/share/quilt/quilt.make 
 
 Makefile:
 	./configure -prefix /usr
 # -plugin-sparql-tracker_direct
-#	qmake
+	qmake
 
 build: debian/build-stamp
 debian/build-stamp: Makefile $(QUILT_STAMPFN)
@@ -16,7 +16,8 @@ debian/build-stamp: Makefile $(QUILT_STAMPFN)
 	$(MAKE) doc
 	touch $@
 
-clean: unpatch
+clean: 
+#unpatch
 	dh_testdir
 	dh_testroot
 	rm -f debian/build-stamp
